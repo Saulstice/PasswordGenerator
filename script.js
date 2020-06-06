@@ -54,6 +54,9 @@ function generatePassword() {
   for (var i =0; i<pwArray.length; i++) {
     pw += pwArray[i];
   }
+
+  //resets options array for each click
+  options = [];
   return pw;
 }
 
@@ -106,7 +109,6 @@ function getOptions() {
       alert("Please type \"yes\" or \"no\"");
       askLower();
     }
-    return options;
   }
   //If user wants uppercase, add uppercase function to options array
   function askUpper() {
@@ -120,7 +122,6 @@ function getOptions() {
       alert("Please type \"yes\" or \"no\"");
       askUpper();
     }
-    return options;
   }
 
 
@@ -136,7 +137,6 @@ function getOptions() {
       alert("Please type \"yes\" or \"no\"");
       askNumbers();
     }
-    return options;
 }
 
   //If user wants specials, add specials function to options array
@@ -151,7 +151,6 @@ function getOptions() {
       alert("Please type \"yes\" or \"no\"");
       askSpecial();
     }
-    return options;
   }
   
   
